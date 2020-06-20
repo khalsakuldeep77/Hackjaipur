@@ -1,4 +1,6 @@
 import pyrebase 
+from flask import *
+app = Flask(__name__)
 
 config = {
     "apiKey": "AIzaSyD8KT7KJ54oTgURRg0FiZPE1t5lPnxP4l0",
@@ -13,12 +15,25 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 
+
 auth = firebase.auth()
 
-email = input('Please Enter your Email\n')
-password = input('Please enter your password\n')
+@app.route('/', methods=['GET', 'POST'])
 
-user = auth.create_user_with_email_and_password(email, password)
-#user = auth.sign_in_with_email_and_password(email, password)
+def basic():
+	unsuccessful = 'Please check your credentials'
+	successful = 'Login successful'
+	if request.method == 'POST':
+		email = request.form['name']
+		password = request.form['pass']
+		try:
+			auth.sign_in_with_email_and_password(email, password)
+			return render_template('new.html', s=successful)
+		except:
+			return render_template('new.html', us=unsuccessful)
 
-auth.get_account_info(user['idToken'])
+	return render_template('new.html')
+
+
+if __name__ == '__main__':
+	app.run()
