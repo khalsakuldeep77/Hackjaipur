@@ -10,6 +10,7 @@
   "dependencies": {
     "expo": "~37.0.3",
     "expo-constants": "~9.0.0",
+    "expo-file-system": "~8.1.0",
     "expo-font": "^8.1.1",
     "expo-image-picker": "~8.1.0",
     "expo-linear-gradient": "^8.1.0",
