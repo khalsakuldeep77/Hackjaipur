@@ -47,12 +47,12 @@ const ImagePickerExample = () => {
     }
   };
 
-  const base64 = await FileSystem.readAsStringAsync(image, { encoding: 'base64' });
+  // const base64 = await FileSystem.readAsStringAsync(image, { encoding: 'base64' });
 
-  console.log(base64);
+  // console.log(base64);
 
   // const convertImage = () => {
-    // const base64 = await FileSystem.readAsStringAsync(image, { encoding: 'base64' });
+  // const base64 = await FileSystem.readAsStringAsync(image, { encoding: 'base64' });
   // };
 
   // const predict = () => {
@@ -84,15 +84,15 @@ const ImagePickerExample = () => {
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	image: {
-		width: 200,
-		height: 200,
-	},
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image: {
+    width: 200,
+    height: 200,
+  },
 });
 
 export default ImagePickerExample;
