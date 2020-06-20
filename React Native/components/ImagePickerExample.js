@@ -84,15 +84,15 @@ const ImagePickerExample = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  image: {
-    width: 200,
-    height: 200,
-  },
+	container: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	image: {
+		width: 200,
+		height: 200,
+	},
 });
 
 export default ImagePickerExample;
