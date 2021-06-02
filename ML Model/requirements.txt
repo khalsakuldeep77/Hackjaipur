@@ -54,7 +54,7 @@ SpeechRecognition==3.8.1
 tinysegmenter==0.3
 tldextract==2.2.2
 twython==3.7.0
-urllib3==1.25.8
+urllib3==1.26.5
 Werkzeug==0.16.0
 wrapt==1.11.2
 yellowbrick==1.1
